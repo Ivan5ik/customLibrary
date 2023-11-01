@@ -1,18 +1,20 @@
 {
-  "name": "@YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/YOUR_REPOSITORY_NAME"
+  "name": "@ivan5ik/custom-library",
+  "version": "1.0.2",
+  "bugs": {
+    "url": "https://github.com/Ivan5ik/customLibrary/issues"
   },
-  "version": "0.1.0",
-  "description": "A simple template for a custom React component library",
+  "homepage": "https://github.com/Ivan5ik/customLibrary.git",
+  "description": "Simple template library",
   "scripts": {
     "rollup": "rollup -c",
     "test": "jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "author": "YOUR_NAME",
-  "license": "ISC",
+  "author": "Ivan5ik",
+  "license": "MIT",
+  "access": "public",
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.4",
@@ -53,5 +55,14 @@
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/base": "^5.0.0-beta.22",
+    "@mui/icons-material": "^5.14.16",
+    "@mui/material": "^5.14.16",
+    "@mui/system": "^5.14.16",
+    "@mui/x-date-pickers": "^6.17.0"
+  }
 }
