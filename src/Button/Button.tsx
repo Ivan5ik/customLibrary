@@ -1,12 +1,11 @@
 import React from "react";
-import "./Button.scss";
-
+import Button from "@mui/material/Button";
 export interface ButtonProps {
   label: string;
 }
 
-const Button = (props: ButtonProps) => {
-  return <button>{props.label}</button>;
+const ButtonComponent = (props: ButtonProps) => {
+  return <Button>{props.label}</Button>;
 };
 
-export default Button;
+export default ButtonComponent;
