@@ -1,6 +1,6 @@
 {
   "name": "@ivan5ik/custom-library",
-  "version": "1.0.6",
+  "version": "1.0.10",
   "bugs": {
     "url": "https://github.com/Ivan5ik/customLibrary/issues"
   },
@@ -57,6 +57,7 @@
   ],
   "types": "dist/index.d.ts",
   "dependencies": {
-    "@mui/material": "^5.14.16"
+    "@mui/material": "^5.14.16",
+    "@emotion/styled": "^11.11.0"
   }
 }

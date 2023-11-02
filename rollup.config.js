@@ -27,6 +27,7 @@ export default [
       typescript({ tsconfig: "./tsconfig.json" }),
       postcss(),
     ],
+    external: ["react", "@mui/material"],
   },
   {
     input: "dist/esm/index.d.ts",
