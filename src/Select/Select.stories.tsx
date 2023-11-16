@@ -12,7 +12,7 @@ const Template: ComponentStory<typeof Select> = (args) => <Select {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  label: "AGE",
+  label: "Age",
   menuItems: [
     { value: "1", label: "test1" },
     { value: "2", label: "test2" },
