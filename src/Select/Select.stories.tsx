@@ -1,14 +1,16 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import Select from ".";
+import { SelectComponent } from ".";
 
 export default {
   title: "ReactComponentLibrary/Select",
-  component: Select,
-} as ComponentMeta<typeof Select>;
+  component: SelectComponent,
+} as ComponentMeta<typeof SelectComponent>;
 
-const Template: ComponentStory<typeof Select> = (args) => <Select {...args} />;
+const Template: ComponentStory<typeof SelectComponent> = (args) => (
+  <SelectComponent {...args} />
+);
 
 export const Default = Template.bind({});
 Default.args = {
