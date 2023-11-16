@@ -5,17 +5,24 @@ import { CustomizeBtn } from "./style";
 export interface DefaultButtonProps extends MuiButtonProps {
   className?: string;
   children: ReactNode;
+  variant: "contained" | "text";
 }
 
 const ButtonComponent: FC<DefaultButtonProps> = ({
   className,
   children,
-  variant,
-
+  variant = "contained",
   ...props
 }) => {
+  const changeColor = (variant: string) =>
+    "contained" === variant ? true : false;
+
   return (
-    <CustomizeBtn {...props} variant="contained" className={className}>
+    <CustomizeBtn
+      {...props}
+      variantColor={changeColor(variant)}
+      className={className}
+    >
       {children}
     </CustomizeBtn>
   );

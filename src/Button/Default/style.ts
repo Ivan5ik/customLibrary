@@ -1,13 +1,20 @@
 import Btn from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
 
-export const CustomizeBtn = styled(Btn)(() => ({
+interface ElseColor {
+  variantColor: boolean;
+}
+
+export const CustomizeBtn = styled(Btn)<ElseColor>(({ variantColor }) => ({
   height: "40px",
-  background: "#2146AF",
+  background: variantColor ? "#2146AF" : "white",
   boxShadow: "none",
   textTransform: "none",
+  color: variantColor ? "white" : "#2146AF",
 
   ":hover": {
-    background: "#17327C",
+    background: variantColor ? "#17327C" : "white",
+    color: variantColor ? "white" : "#17327C",
+    boxShadow: "none",
   },
 }));

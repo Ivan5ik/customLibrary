@@ -13,4 +13,4 @@ const Template: ComponentStory<typeof ButtonComponent> = (args) => (
 );
 
 export const Default = Template.bind({});
-Default.args = { className: "asd" };
+Default.args = { className: "asd", variant: "text" };
