@@ -4,19 +4,17 @@ import {
   CheckboxProps as MuiCheckboxProps,
 } from "@mui/material";
 import { CustomizeCheckbox } from "./style";
-import { CheckboxCheckIcon, CheckboxNotCheckIcon } from "../icons";
+import { CheckboxCheckIcon, CheckboxNotCheckIcon } from "../Icons";
 
 export interface CheckboxProps extends MuiCheckboxProps {
   labelPlacement?: "start" | "end" | "top" | "bottom";
   className?: string;
-  disabled: boolean;
   label?: string;
 }
 
 const Checkbox: FC<CheckboxProps> = ({
   labelPlacement,
   className,
-  disabled,
   label,
   ...props
 }) => {
@@ -26,7 +24,6 @@ const Checkbox: FC<CheckboxProps> = ({
         <CustomizeCheckbox
           {...props}
           className={className}
-          disabled={disabled}
           icon={<CheckboxNotCheckIcon />}
           checkedIcon={<CheckboxCheckIcon />}
         />

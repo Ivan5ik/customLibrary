@@ -1,6 +1,6 @@
 import React, { FC } from "react";
-import { CustomizeBtn } from "./style";
 import { ButtonProps as MuiButtonProps } from "@mui/material/Button";
+import { CustomizeBtn } from "./style";
 
 export interface ButtonProps extends MuiButtonProps {
   className: string;

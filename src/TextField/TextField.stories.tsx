@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import TextField from "./TextField";
 
 export default {
-  title: "ReactComponentLibrary/TextField",
+  title: "ReactComponentLibrary/Text Field",
   component: TextField,
 } as ComponentMeta<typeof TextField>;
 
