@@ -14,6 +14,14 @@ export const CustomizeSelect = styled(Select)(() => ({
   "&:hover .MuiOutlinedInput-notchedOutline": {
     borderColor: "#2146AF",
   },
+
+  "& .MuiSvgIcon-root": {
+    color: "#B8B9BE",
+  },
+
+  "&.Mui-focused .MuiSvgIcon-root": {
+    color: "#2146AF",
+  },
 }));
 
 export const CustomizeInputLabel = styled(InputLabel)(() => ({

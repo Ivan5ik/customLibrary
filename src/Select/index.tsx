@@ -6,6 +6,7 @@ import {
 } from "./style";
 import { SelectProps as MuiSelectProps } from "@mui/material/Select";
 import { FormControl, MenuItem } from "@mui/material";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 interface MenuItem {
   value: string;
@@ -27,7 +28,12 @@ const SelectComponent: FC<SelectProps> = ({
   return (
     <FormControl fullWidth>
       <CustomizeInputLabel>{label}</CustomizeInputLabel>
-      <CustomizeSelect {...props} label={label} className={className}>
+      <CustomizeSelect
+        {...props}
+        label={label}
+        className={className}
+        IconComponent={ExpandMoreIcon}
+      >
         {menuItems.map((item) => (
           <CustomizeMenuItem key={item.value} value={item.value}>
             {item.label}
