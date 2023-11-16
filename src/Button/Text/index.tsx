@@ -20,4 +20,4 @@ const TextButtonComponent: FC<TextButtonProps> = ({
   );
 };
 
-export default TextButtonComponent;
+export { TextButtonComponent };
