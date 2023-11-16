@@ -1,21 +1,21 @@
-import React, { FC } from "react";
+import React, { FC, ReactNode } from "react";
 import { CustomizeBtn } from "./style";
 import { ButtonProps as MuiButtonProps } from "@mui/material/Button";
 
 export interface TextButtonProps extends MuiButtonProps {
-  className: string;
-  text: string;
+  className?: string;
+  children: ReactNode;
 }
 
 const TextButtonComponent: FC<TextButtonProps> = ({
   className,
+  children,
   variant,
-  text,
   ...props
 }) => {
   return (
     <CustomizeBtn {...props} variant="text" className={className}>
-      {text}
+      {children}
     </CustomizeBtn>
   );
 };
