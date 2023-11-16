@@ -24,11 +24,11 @@ const Checkbox: FC<CheckboxProps> = ({
     <FormControlLabel
       control={
         <CustomizeCheckbox
+          {...props}
           className={className}
           disabled={disabled}
           icon={<CheckboxNotCheckIcon />}
           checkedIcon={<CheckboxCheckIcon />}
-          {...props}
         />
       }
       label={label}
