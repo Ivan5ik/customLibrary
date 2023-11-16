@@ -5,10 +5,7 @@ export const CustomizeTextField = styled(TextField)(() => ({
   height: "56px",
   borderRadius: "4px",
   borderColor: "#B8B9BE",
-
-  "& .MuiInputBase-input": {
-    color: "#656873",
-  },
+  color: "#191D2E",
 
   "& label.Mui-focused": {
     color: "#2146AF",

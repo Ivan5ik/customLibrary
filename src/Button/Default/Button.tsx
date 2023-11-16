@@ -2,12 +2,12 @@ import React, { FC } from "react";
 import { ButtonProps as MuiButtonProps } from "@mui/material/Button";
 import { CustomizeBtn } from "./style";
 
-export interface ButtonProps extends MuiButtonProps {
+export interface DefaultButtonProps extends MuiButtonProps {
   className: string;
   text: string;
 }
 
-const ButtonComponent: FC<ButtonProps> = ({
+const ButtonComponent: FC<DefaultButtonProps> = ({
   className,
   variant,
   text,
