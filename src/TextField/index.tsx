@@ -12,4 +12,4 @@ const TextField: FC<CustomTextFieldProps> = ({ className, ...props }) => {
   );
 };
 
-export default TextField;
+export { TextField };

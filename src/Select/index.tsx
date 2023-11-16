@@ -38,4 +38,4 @@ const SelectComponent: FC<SelectProps> = ({
   );
 };
 
-export default SelectComponent;
+export { SelectComponent };

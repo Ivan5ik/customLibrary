@@ -34,4 +34,4 @@ const Checkbox: FC<CheckboxProps> = ({
   );
 };
 
-export default Checkbox;
+export { Checkbox };
