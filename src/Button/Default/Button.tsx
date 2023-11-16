@@ -3,7 +3,7 @@ import { ButtonProps as MuiButtonProps } from "@mui/material/Button";
 import { CustomizeBtn } from "./style";
 
 export interface DefaultButtonProps extends MuiButtonProps {
-  className: string;
+  className?: string;
   text: string;
 }
 
@@ -20,4 +20,4 @@ const ButtonComponent: FC<DefaultButtonProps> = ({
   );
 };
 
-export default ButtonComponent;
+export { ButtonComponent };
