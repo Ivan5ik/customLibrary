@@ -7,10 +7,10 @@ import { CustomizeCheckbox } from "./style";
 import { CheckboxCheckIcon, CheckboxNotCheckIcon } from "../icons";
 
 export interface CheckboxProps extends MuiCheckboxProps {
-  label?: string;
   labelPlacement?: "start" | "end" | "top" | "bottom";
   className?: string;
   disabled: boolean;
+  label?: string;
 }
 
 const Checkbox: FC<CheckboxProps> = ({
