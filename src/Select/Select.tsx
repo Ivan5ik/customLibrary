@@ -6,7 +6,6 @@ import {
 } from "./style";
 import { SelectProps as MuiSelectProps } from "@mui/material/Select";
 import { FormControl, MenuItem } from "@mui/material";
-import { ArrowIcon } from "../icons";
 
 interface MenuItem {
   value: string;
@@ -28,12 +27,7 @@ const SelectComponent: FC<SelectProps> = ({
   return (
     <FormControl fullWidth>
       <CustomizeInputLabel>{label}</CustomizeInputLabel>
-      <CustomizeSelect
-        {...props}
-        label={label}
-        className={className}
-        IconComponent={ArrowIcon}
-      >
+      <CustomizeSelect {...props} label={label} className={className}>
         {menuItems.map((item) => (
           <CustomizeMenuItem key={item.value} value={item.value}>
             {item.label}
