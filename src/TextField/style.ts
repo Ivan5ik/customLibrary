@@ -6,6 +6,7 @@ export const CustomizeTextField = styled(TextField)(() => ({
   borderRadius: "4px",
   borderColor: "#B8B9BE",
   color: "#191D2E",
+  fontFamily: "Anek Latin, sans-serif",
 
   "& label.Mui-focused": {
     color: "#2146AF",

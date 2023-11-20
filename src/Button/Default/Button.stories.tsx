@@ -9,8 +9,7 @@ export default {
 } as ComponentMeta<typeof ButtonComponent>;
 
 const Template: ComponentStory<typeof ButtonComponent> = (args) => (
-  <ButtonComponent {...args}>Test</ButtonComponent>
+  <ButtonComponent {...args}>Search</ButtonComponent>
 );
-
 export const Default = Template.bind({});
-Default.args = { className: "asd", variant: "text" };
+Default.args = { className: "asd", variant: "contained" };

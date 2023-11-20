@@ -10,6 +10,7 @@ export const CustomizeBtn = styled(Btn)<ElseColor>(({ variantColor }) => ({
   background: variantColor ? "#2146AF" : "white",
   boxShadow: "none",
   textTransform: "none",
+  fontFamily: "Anek Latin, sans-serif",
   color: variantColor ? "white" : "#2146AF",
 
   ":hover": {
