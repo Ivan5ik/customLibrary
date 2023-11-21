@@ -31,6 +31,7 @@ const SearchSelect: FC<SearchSelectProps> = ({
   menuIsOpen,
   styles,
   value,
+  ...props
 }) => {
   const customFilterOption = (option: any, rawInput: any) => {
     return option.label.toLowerCase().includes(rawInput.toLowerCase());
@@ -45,6 +46,7 @@ const SearchSelect: FC<SearchSelectProps> = ({
         ClearIndicator: CustomClearIndicator,
         GroupHeading,
       }}
+      {...props}
       filterOption={customFilterOption}
       isClearable
       isMulti
