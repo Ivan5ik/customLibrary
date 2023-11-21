@@ -6,11 +6,21 @@ import { styled } from "@mui/material/styles";
 // }
 
 export const CustomizeBtn = styled(Button)(
-  /*<ElseColor>*/ (/*{ variantColor }*/) => ({
-    //   height: "40px",
+  /*<ElseColor>*/ (/*{ variantColor }*/ { theme }) => ({
+    height: "40px",
     //   background: variantColor ? "#2146AF" : "white",
-    //   boxShadow: "none",
-    //   textTransform: "none",
+    boxShadow: "none",
+    textTransform: "none",
+    background:
+      theme.palette.primary.main === "#1976d2"
+        ? "red"
+        : theme.palette.primary.main,
+
+    // "&.MuiButtonBase-root": {
+    //   backgroundColor: "#ff0000", // Увеличиваем специфичность для стиля
+    // },
+
+    color: "whitesmoke",
     //   fontFamily: "Anek Latin, sans-serif",
     //   color: variantColor ? "white" : "#2146AF",
     //
@@ -21,3 +31,7 @@ export const CustomizeBtn = styled(Button)(
     //   },
   })
 );
+
+// export const CustomizeBtnTheme = styled(CustomizeBtn)(({ theme }) => ({
+//   background: "#ff0000",
+// }));

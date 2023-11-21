@@ -11,17 +11,17 @@ export default {
 
 const Template: ComponentStory<typeof ButtonComponent> = (args) => {
   return (
-    <ThemeProvider
-      theme={createTheme({
-        palette: {
-          primary: {
-            main: "#fb10e3",
-          },
-        },
-      })}
-    >
-      <ButtonComponent {...args}>Search</ButtonComponent>
-    </ThemeProvider>
+    // <ThemeProvider
+    //   theme={createTheme({
+    //     palette: {
+    //       primary: {
+    //         main: "#3ceb07",
+    //       },
+    //     },
+    //   })}
+    // >
+    <ButtonComponent {...args}>Search</ButtonComponent>
+    //</ThemeProvider>
   );
 };
 export const Default = Template.bind({});
