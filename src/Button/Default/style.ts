@@ -11,14 +11,13 @@ export const CustomizeBtn = styled(Button)(
     //   background: variantColor ? "#2146AF" : "white",
     boxShadow: "none",
     textTransform: "none",
-    background:
-      theme.palette.primary.main === "#1976d2"
-        ? "red"
-        : theme.palette.primary.main,
 
-    // "&.MuiButtonBase-root": {
-    //   backgroundColor: "#ff0000", // Увеличиваем специфичность для стиля
-    // },
+    "&.MuiButtonBase-root": {
+      background:
+        theme.palette.primary.main === "#1976d2"
+          ? "red"
+          : theme.palette.primary.main,
+    },
 
     color: "whitesmoke",
     //   fontFamily: "Anek Latin, sans-serif",
