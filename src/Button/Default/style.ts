@@ -7,11 +7,11 @@ interface ElseColor {
 
 export const CustomizeBtn = styled(Button)<ElseColor>(({ variantColor }) => ({
   height: "40px",
-  // background: variantColor ? "#2146AF" : "white",
+  background: variantColor ? "#2146AF" : "white",
   boxShadow: "none",
   textTransform: "none",
   fontFamily: "Anek Latin, sans-serif",
-  // color: variantColor ? "white" : "#2146AF",
+  color: variantColor ? "white" : "#2146AF",
 
   ":hover": {
     background: variantColor ? "#17327C" : "white",
