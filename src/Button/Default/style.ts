@@ -1,11 +1,11 @@
-import Btn from "@mui/material/Button";
+import { Button } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 interface ElseColor {
   variantColor: boolean;
 }
 
-export const CustomizeBtn = styled(Btn)<ElseColor>(({ variantColor }) => ({
+export const CustomizeBtn = styled(Button)<ElseColor>(({ variantColor }) => ({
   height: "40px",
   // background: variantColor ? "#2146AF" : "white",
   boxShadow: "none",

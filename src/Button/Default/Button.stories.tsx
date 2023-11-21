@@ -15,7 +15,7 @@ const Template: ComponentStory<typeof ButtonComponent> = (args) => {
       theme={createTheme({
         palette: {
           primary: {
-            main: "#0026ff",
+            main: "#e010fb",
             dark: "#c51162",
           },
         },
