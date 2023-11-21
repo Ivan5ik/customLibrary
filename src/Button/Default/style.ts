@@ -6,18 +6,10 @@ import { styled } from "@mui/material/styles";
 // }
 
 export const CustomizeBtn = styled(Button)(
-  /*<ElseColor>*/ (/*{ variantColor }*/ { theme }) => ({
+  /*<ElseColor>*/ (/*{ variantColor }*/) => ({
     height: "40px",
-    //   background: variantColor ? "#2146AF" : "white",
     boxShadow: "none",
     textTransform: "none",
-
-    "&.MuiButtonBase-root": {
-      background:
-        theme.palette.primary.main === "#1976d2"
-          ? "red"
-          : theme.palette.primary.main,
-    },
 
     color: "whitesmoke",
     //   fontFamily: "Anek Latin, sans-serif",
