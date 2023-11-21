@@ -16,7 +16,6 @@ const Template: ComponentStory<typeof ButtonComponent> = (args) => {
         palette: {
           primary: {
             main: "#fb10e3",
-            dark: "#c51162",
           },
         },
       })}

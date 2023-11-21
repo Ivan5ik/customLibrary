@@ -24,6 +24,7 @@ const ButtonComponent: FC<DefaultButtonProps> = ({
     // <ThemeProvider theme={theme}>
     <CustomizeBtn
       {...props}
+      variant="contained"
       variantColor={changeColor(variant)}
       className={className}
     >
