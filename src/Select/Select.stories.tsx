@@ -2,14 +2,31 @@ import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { SelectComponent } from ".";
+import { ThemeProvider, createTheme } from "@mui/material";
 
 export default {
   title: "ReactComponentLibrary/Select",
   component: SelectComponent,
+  argTypes: {
+    color: { control: { type: "select", options: ["#e10000", "#fbff00"] } },
+  },
 } as ComponentMeta<typeof SelectComponent>;
 
-const Template: ComponentStory<typeof SelectComponent> = (args) => (
-  <SelectComponent {...args} />
+const Template: ComponentStory<typeof SelectComponent> = ({
+  color,
+  ...args
+}) => (
+  <ThemeProvider
+    theme={createTheme({
+      palette: {
+        primary: {
+          main: color ?? "#01ff38",
+        },
+      },
+    })}
+  >
+    <SelectComponent {...args} />
+  </ThemeProvider>
 );
 
 export const Default = Template.bind({});

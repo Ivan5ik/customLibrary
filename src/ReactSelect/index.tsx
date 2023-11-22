@@ -12,6 +12,7 @@ export interface SearchSelectProps {
   menuIsOpen?: any;
   styles: any;
   value?: any;
+  className?: string;
 }
 
 const GroupHeading = (props: any) => <components.GroupHeading {...props} />;
@@ -31,6 +32,7 @@ const SearchSelect: FC<SearchSelectProps> = ({
   menuIsOpen,
   styles,
   value,
+  className,
   ...props
 }) => {
   const customFilterOption = (option: any, rawInput: any) => {
@@ -50,6 +52,7 @@ const SearchSelect: FC<SearchSelectProps> = ({
       filterOption={customFilterOption}
       isClearable
       isMulti
+      className={className}
       isSearchable
       menuIsOpen={menuIsOpen}
       onChange={onChange}

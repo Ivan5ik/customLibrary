@@ -8,8 +8,28 @@ export default {
   title: "ReactComponentLibrary/Button",
   component: ButtonComponent,
   argTypes: {
-    color: { control: { type: "select", options: ["#13ef1a", "#042fec"] } },
+    color: {
+      description: "color STRING",
+      control: {
+        type: "select",
+        options: ["#13ef1a", "#042fec"],
+      },
+    },
     mode: { control: { type: "select", options: ["dark", "light"] } },
+    variant: {
+      description: "Variant BTN",
+      control: {
+        type: "radio",
+        options: ["text", "contained", "outlined"],
+      },
+    },
+    size: {
+      description: "Size BTN",
+      control: {
+        type: "select",
+        options: ["small", "medium", "large"],
+      },
+    },
   },
 } as ComponentMeta<typeof ButtonComponent>;
 
@@ -25,13 +45,11 @@ const Template: ComponentStory<typeof ButtonComponent | any> = ({
           mode: mode,
           ...(mode === "light"
             ? {
-                // palette values for light mode
                 primary: {
                   main: color,
                 },
               }
             : {
-                // palette values for dark mode
                 primary: {
                   main: "#000000",
                 },
@@ -50,4 +68,6 @@ Default.args = {
   variant: "contained",
   color: "#ec042f",
   mode: "dark",
+  disabled: false,
+  sx: {},
 };
