@@ -2,9 +2,10 @@ import React, { FC } from "react";
 
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { DatePickerProps } from "@mui/x-date-pickers/DatePicker";
 import { StyledDatePicker } from "./styles";
 
-const CalendarIcon: FC = () => (
+const CalendarIcon = (colorIcon: string) => (
   <svg
     data-testid="calendar-icon"
     fill="none"
@@ -20,28 +21,30 @@ const CalendarIcon: FC = () => (
         " 4 19 4ZM19 20H5V9H19V20ZM6.5 13C6.5 11.62 7.62 10.5 9 10.5C10.38 10.5 11.5 11.62 11.5 13C11.5 14.38 10.38" +
         " 15.5 9 15.5C7.62 15.5 6.5 14.38 6.5 13Z"
       }
-      fill="#2146AF"
+      fill={colorIcon}
       fillRule="evenodd"
     />
   </svg>
 );
 
-export interface ICalendarComponent {
+export interface ICalendarComponent extends DatePickerProps<any> {
   name: string;
   errors: any;
   label?: string;
   value?: Date;
   setValue: (val: Date) => void;
   disablePast?: boolean;
+  colorIcon?: string;
 }
 
 export const Calendar: FC<ICalendarComponent> = ({
-  name,
   errors,
   label = "Date",
   value,
   setValue,
   disablePast = true,
+  colorIcon = "#2146AF",
+  ...props
 }) => (
   <LocalizationProvider dateAdapter={AdapterDateFns}>
     <StyledDatePicker
@@ -56,9 +59,10 @@ export const Calendar: FC<ICalendarComponent> = ({
         1;
       }}
       slots={{
-        openPickerIcon: CalendarIcon,
+        openPickerIcon: () => CalendarIcon(colorIcon),
       }}
       value={value}
+      {...props}
     />
   </LocalizationProvider>
 );

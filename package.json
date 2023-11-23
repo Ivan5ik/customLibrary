@@ -61,6 +61,7 @@
     "@mui/icons-material": "^5.14.18",
     "@mui/material": "^5.14.16",
     "@mui/x-date-pickers": "^6.18.1",
+    "date-fns": "^2.30.0",
     "react-select": "^5.8.0"
   }
 }
