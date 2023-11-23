@@ -13,6 +13,7 @@ export interface SearchSelectProps {
   styles: any;
   value?: any;
   className?: string;
+  size?: "small" | "medium" | "large" | undefined;
 }
 
 const GroupHeading = (props: any) => <components.GroupHeading {...props} />;
@@ -32,11 +33,23 @@ const SearchSelect: FC<SearchSelectProps> = ({
   menuIsOpen,
   styles,
   value,
+  size,
   className,
   ...props
 }) => {
   const customFilterOption = (option: any, rawInput: any) => {
     return option.label.toLowerCase().includes(rawInput.toLowerCase());
+  };
+
+  const sizing = (size: "small" | "medium" | "large" | undefined) => {
+    switch (size) {
+      case "small":
+        return "55px";
+      case "medium":
+        return "65px";
+      default:
+        return "75px";
+    }
   };
 
   return (
@@ -59,7 +72,12 @@ const SearchSelect: FC<SearchSelectProps> = ({
       onInputChange={onInputChange}
       options={options}
       placeholder={placeholder}
-      styles={styles}
+      styles={{
+        control: (provided) => ({
+          ...provided,
+          height: sizing(size),
+        }),
+      }}
       value={value}
     />
   );

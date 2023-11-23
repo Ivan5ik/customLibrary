@@ -24,6 +24,7 @@ const Template: ComponentStory<typeof SearchSelect> = (args) => {
 export const Default = Template.bind({});
 
 Default.args = {
+  size: "small",
   options: [
     {
       label: "Countries",
