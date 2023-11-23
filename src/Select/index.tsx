@@ -17,16 +17,20 @@ export interface SelectProps extends MuiSelectProps {
   className?: string;
   label: string;
   menuItems: MenuItem[];
+  sx: any;
 }
 
 const SelectComponent: FC<SelectProps> = ({
   menuItems,
   className,
   label,
+  sx = {},
   ...props
 }) => {
+  const isEmptyObject = (sx: any) => Object.keys(sx).length === 0;
+
   return (
-    <FormControl fullWidth>
+    <FormControl sx={isEmptyObject(sx) ? { m: 1, minWidth: 130 } : sx}>
       <CustomizeInputLabel>{label}</CustomizeInputLabel>
       <CustomizeSelect
         {...props}

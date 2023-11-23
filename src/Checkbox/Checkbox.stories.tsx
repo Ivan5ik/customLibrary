@@ -8,6 +8,15 @@ export default {
   component: Checkbox,
   argTypes: {
     color: { control: { type: "select", options: ["#e10000", "#fbff00"] } },
+    size: {
+      control: { type: "select", options: ["small", "medium", "large"] },
+    },
+    labelPlacement: {
+      control: { type: "select", options: ["start", "end", "top", "bottom"] },
+    },
+    disabled: { control: "boolean" },
+    checked: { control: "boolean" },
+    indeterminate: { control: "boolean" },
   },
 } as ComponentMeta<typeof Checkbox>;
 

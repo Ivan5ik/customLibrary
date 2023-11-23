@@ -9,6 +9,11 @@ export default {
   component: SelectComponent,
   argTypes: {
     color: { control: { type: "select", options: ["#e10000", "#fbff00"] } },
+    label: { control: "text" },
+    variant: {
+      control: { type: "select", options: ["standard", "outlined", "filled"] },
+    },
+    disabled: { control: "boolean" },
   },
 } as ComponentMeta<typeof SelectComponent>;
 
