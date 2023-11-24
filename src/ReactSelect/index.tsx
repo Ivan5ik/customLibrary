@@ -76,6 +76,7 @@ const SearchSelect: FC<SearchSelectProps> = ({
         control: (provided) => ({
           ...provided,
           height: sizing(size),
+          fontFamily: "Anek Latin, sans-serif",
         }),
       }}
       value={value}
