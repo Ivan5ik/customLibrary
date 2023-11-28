@@ -2,12 +2,12 @@ import React, { FC } from "react";
 import { ButtonProps as MuiButtonProps } from "@mui/material/Button";
 import { MuiAccordion, MuiAccordionSummary, MuiExpandMoreIcon } from "./style";
 
-export interface ButtonComponentProps {
+export interface AccordionProps {
   label?: string;
   children?: any;
 }
 
-const Accordion: FC<ButtonComponentProps> = ({ children, label }) => {
+const Accordion: FC<AccordionProps> = ({ children, label }) => {
   return (
     <MuiAccordion>
       <MuiAccordionSummary

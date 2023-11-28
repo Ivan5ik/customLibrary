@@ -1,11 +1,11 @@
 import React, { FC } from "react";
 
-export interface ButtonComponentProps {
+export interface ImgComponentProps {
   onClick?: any;
   children?: any;
 }
 
-const ImgComponent: FC<ButtonComponentProps> = ({ children, onClick }) => {
+const ImgComponent: FC<ImgComponentProps> = ({ children, onClick }) => {
   return (
     <div onClick={onClick} style={{ cursor: "pointer" }}>
       {children}

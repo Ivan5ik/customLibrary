@@ -37,7 +37,7 @@ export interface ICalendarComponent extends DatePickerProps<any> {
   colorIcon?: string;
 }
 
-export const Calendar: FC<ICalendarComponent> = ({
+const Calendar: FC<ICalendarComponent> = ({
   errors,
   label = "Date",
   value,
@@ -66,3 +66,4 @@ export const Calendar: FC<ICalendarComponent> = ({
     />
   </LocalizationProvider>
 );
+export { Calendar };
