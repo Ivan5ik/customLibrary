@@ -9,4 +9,4 @@ export * from "./ImgComponent";
 export * from "./Modal";
 export * from "./TabComponent";
 export * from "./Tag";
-export * from "./";
+export * from "./Calendar";
