@@ -1,8 +1,13 @@
-import React from "react";
+import React, { FC } from "react";
 import SkillsOrange from "./style";
 
-const Tag = ({ children }: any) => (
-  <SkillsOrange>
+export interface TagProps {
+  className?: string;
+  children: string;
+}
+
+const Tag: FC<TagProps> = ({ children, className }: any) => (
+  <SkillsOrange className={className}>
     <p>{children}</p>
   </SkillsOrange>
 );
