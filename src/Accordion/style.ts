@@ -37,7 +37,6 @@ export const MuiAccordion = styled(Accordion)`
 
   .MuiCollapse-wrapper {
     max-height: 300px;
-    /* margin-bottom: 20px; */
     overflow-y: auto;
   }
 

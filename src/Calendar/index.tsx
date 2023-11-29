@@ -35,6 +35,7 @@ export interface ICalendarComponent extends DatePickerProps<any> {
   setValue: (val: Date) => void;
   disablePast?: boolean;
   colorIcon?: string;
+  className?: string;
 }
 
 const Calendar: FC<ICalendarComponent> = ({

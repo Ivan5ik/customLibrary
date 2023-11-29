@@ -1,15 +1,15 @@
 import React, { FC } from "react";
-import { ButtonProps as MuiButtonProps } from "@mui/material/Button";
+import { AccordionProps } from "@mui/material/Accordion";
 import { MuiAccordion, MuiAccordionSummary, MuiExpandMoreIcon } from "./style";
 
-export interface AccordionProps {
+export interface IAccordionProps extends AccordionProps {
   label?: string;
-  children?: any;
+  className?: string;
 }
 
-const Accordion: FC<AccordionProps> = ({ children, label }) => {
+const Accordion: FC<IAccordionProps> = ({ children, label, ...props }) => {
   return (
-    <MuiAccordion>
+    <MuiAccordion {...props}>
       <MuiAccordionSummary
         aria-controls="panel1a-content"
         expandIcon={<MuiExpandMoreIcon />}
