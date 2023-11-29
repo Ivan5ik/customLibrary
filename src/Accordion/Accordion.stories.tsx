@@ -3,6 +3,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { Accordion } from ".";
 import { MuiAccordionDetails, MuiCheckbox } from "./style";
+import { ThemeProvider, createTheme } from "@mui/material";
 
 export default {
   title: "ReactComponentLibrary/Accordion",
@@ -11,16 +12,26 @@ export default {
 
 const Template: ComponentStory<typeof Accordion | any> = (args) => {
   return (
-    <div style={{ width: "240px" }}>
-      <Accordion {...args}>
-        {[1, 2, 3].map((item, index) => (
-          <MuiAccordionDetails key={index}>
-            <MuiCheckbox checked={!(index % 2)} />
-            <span>{item}</span>
-          </MuiAccordionDetails>
-        ))}
-      </Accordion>
-    </div>
+    <ThemeProvider
+      theme={createTheme({
+        palette: {
+          primary: {
+            main: "#ff8800",
+          },
+        },
+      })}
+    >
+      <div style={{ width: "240px" }}>
+        <Accordion {...args}>
+          {[1, 2, 3].map((item, index) => (
+            <MuiAccordionDetails key={index}>
+              <MuiCheckbox checked={!(index % 2)} />
+              <span>{item}</span>
+            </MuiAccordionDetails>
+          ))}
+        </Accordion>
+      </div>
+    </ThemeProvider>
   );
 };
 export const Default = Template.bind({});

@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import { AccordionProps } from "@mui/material/Accordion";
 import { MuiAccordion, MuiAccordionSummary, MuiExpandMoreIcon } from "./style";
+import { Typography } from "@mui/material";
 
 export interface IAccordionProps extends AccordionProps {
   label?: string;
@@ -15,7 +16,7 @@ const Accordion: FC<IAccordionProps> = ({ children, label, ...props }) => {
         expandIcon={<MuiExpandMoreIcon />}
         id="panel1a-header"
       >
-        {label}
+        <Typography color="primary">{label}</Typography>
       </MuiAccordionSummary>
       {children}
     </MuiAccordion>
