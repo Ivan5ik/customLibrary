@@ -28,11 +28,10 @@ const CalendarIcon = (colorIcon: string) => (
 );
 
 export interface ICalendarComponent extends DatePickerProps<any> {
-  name: string;
-  errors: any;
+  errors?: any;
   label?: string;
   value?: Date;
-  setValue: (val: Date) => void;
+  setValue?: (val: Date) => void;
   disablePast?: boolean;
   colorIcon?: string;
   className?: string;
@@ -54,7 +53,7 @@ const Calendar: FC<ICalendarComponent> = ({
       error={!!errors}
       label={label}
       onChange={(newValue: any) => {
-        if (newValue) {
+        if (newValue && setValue) {
           setValue(newValue);
         }
         1;
