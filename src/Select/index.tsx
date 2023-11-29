@@ -17,7 +17,7 @@ export interface SelectProps extends MuiSelectProps {
   className?: string;
   label: string;
   menuItems: MenuItem[];
-  sx: any;
+  sx?: any;
 }
 
 const SelectComponent: FC<SelectProps> = ({

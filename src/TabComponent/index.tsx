@@ -8,7 +8,7 @@ export interface TabsComponentProps extends TabsProps {
   labels: string[];
   selectedTab: number;
   handleChangeTab: (newValue: number) => void;
-  disabled: boolean[];
+  disabled?: boolean[];
 }
 
 export const TabsComponent = ({
@@ -28,7 +28,11 @@ export const TabsComponent = ({
         value={selectedTab}
       >
         {labels.map((label, index) => (
-          <Tab disabled={disabled[index]} key={index} label={label} />
+          <Tab
+            disabled={disabled && disabled[index]}
+            key={index}
+            label={label}
+          />
         ))}
       </Tabs>
     </TabComponent>
