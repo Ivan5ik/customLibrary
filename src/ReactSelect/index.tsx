@@ -10,7 +10,7 @@ export interface SearchSelectProps {
   placeholder?: string;
   onInputChange?: any;
   menuIsOpen?: any;
-  styles: any;
+  styles?: any;
   value?: any;
   className?: string;
   size?: "small" | "medium" | "large" | undefined;

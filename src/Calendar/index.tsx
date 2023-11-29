@@ -44,6 +44,7 @@ const Calendar: FC<ICalendarComponent> = ({
   setValue,
   disablePast = true,
   colorIcon = "#2146AF",
+  className,
   ...props
 }) => (
   <LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -52,6 +53,7 @@ const Calendar: FC<ICalendarComponent> = ({
       disablePast={!!disablePast}
       error={!!errors}
       label={label}
+      className={className}
       onChange={(newValue: any) => {
         if (newValue && setValue) {
           setValue(newValue);
